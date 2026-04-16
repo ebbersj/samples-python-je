@@ -45,13 +45,13 @@ unbounded history growth in long-running or infinite workflows.
 The worker will log each iteration as it runs:
 
 ```
-INFO  Running iteration 0 of 10
 INFO  Running iteration 1 of 10
+INFO  Running iteration 2 of 10
 ...
 INFO  Running iteration 9 of 10
 INFO  Reached max iterations (10). Done.
 ```
 
-In the [Temporal Web UI](http://localhost:8233), you will see 11 completed workflow
+In the [Temporal Web UI](http://localhost:8233), you will see 10 completed workflow
 executions all sharing the same Workflow ID (`looping-workflow`) but with
-`ContinuedAsNew` status on the first 10 and `Completed` on the final one.
+`ContinuedAsNew` status on the first 9 and `Completed` on the final one.

@@ -15,7 +15,7 @@ async def main() -> None:
 
     await client.execute_workflow(
         LoopingWorkflow.run,
-        0,  # start at iteration 0
+        1,  # start at iteration 1
         id=WORKFLOW_ID,
         task_queue=TASK_QUEUE,
     )
