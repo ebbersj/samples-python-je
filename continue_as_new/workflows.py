@@ -10,12 +10,12 @@ MAX_ITERATIONS = 10
 @workflow.defn
 class LoopingWorkflow:
     @workflow.run
-    async def run(self, iteration: int = 0) -> None:
+    async def run(self, iteration: int = 1) -> None:
         """
         Run one iteration of the loop.
 
         Args:
-            iteration: The current iteration number (default 0 on first start).
+            iteration: The current iteration number (default 1 on first start).
         """
         if iteration >= MAX_ITERATIONS:
             workflow.logger.info(f"Reached max iterations ({MAX_ITERATIONS}). Done.")
